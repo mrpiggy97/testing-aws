@@ -1,4 +1,4 @@
-module github.com/mrpiggy97/testing-azure
+module github.com/mrpiggy97/testing-aws
 
 go 1.16
 
