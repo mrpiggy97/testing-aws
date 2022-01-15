@@ -8,8 +8,8 @@ RUN yarn install
 
 FROM golang:alpine
 
-WORKDIR /testing-azure
+WORKDIR /testing-aws
 COPY --from=Builder /first-app .
-RUN apk add --no-cache git
-RUN go get -d -v ./...
-CMD [ "go", "run", "main.go" ]
+RUN go mod tidy
+RUN go build main.go
+CMD ["./main"]
