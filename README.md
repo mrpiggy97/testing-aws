@@ -1,2 +1,2 @@
-# testing-azure
-small react app to test azure app service
+# testing-aws
+small react app to test aws copilot
