@@ -4,9 +4,6 @@ import '../App.css';
 
 import { useHistory } from 'react-router-dom'
 
-import getNumbers from '../services/getNumbers'
-import { stringify } from 'querystring';
-
 export default function HomeView() : JSX.Element {
 
     const history = useHistory()
@@ -16,17 +13,12 @@ export default function HomeView() : JSX.Element {
         history.push("/about")
     }
 
-    const retrieveNumbers = async (e : React.MouseEvent) => {
+    const printNumbers = (e : React.MouseEvent) => {
       e.preventDefault()
-      try {
-        let response = await getNumbers()
-        console.log(response.data)
-        let data : string = stringify(response.data)
-        alert(data)
-      } catch (error) {
-        alert("there was an error")
-        console.log(error)
-      }
+      let numbers : number[] = [1,2,333,44,1]
+      numbers.forEach((n : number) => {
+        alert(n)
+      })
     }
 
     return (
@@ -35,7 +27,7 @@ export default function HomeView() : JSX.Element {
         <img src={logo} className="App-logo" alt="logo" />
         <span>this is an app deployed with azure app service</span>
         <span onClick={goToHome}>about</span>
-        <span onClick={retrieveNumbers}>get numbers</span>
+        <span onClick={printNumbers}>get numbers</span>
       </header>
     </div>
   );
