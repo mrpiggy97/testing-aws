@@ -5,5 +5,3 @@ services:
     image: testing-aws:v1.0.2
     ports:
       - 5000:5000
-    environment:
-      - ALLOWED_HOST=testinghost:5000
