@@ -22,6 +22,7 @@ func (serverInstance *Server) ServeHTTP(writer http.ResponseWriter, request *htt
 			writer.WriteHeader(http.StatusForbidden)
 		}
 	}
+	fmt.Println("request host: ", request.Host)
 	var allowedMethods string = strings.Join(serverInstance.AllowedMethods, ",")
 	writer.Header().Add("Access-Control-Allow-Methods", allowedMethods)
 	serverInstance.Router.ServeHTTP(writer, request)
