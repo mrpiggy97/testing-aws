@@ -25,7 +25,8 @@ export default function HomeView() : JSX.Element {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <span>this is an app deployed with azure app service</span>
+        <span>this is an app deployed with aws ecs copilot CLI</span>
+        <span>app is hosted on aws route53</span>
         <span onClick={goToHome}>about</span>
         <span onClick={printNumbers}>get numbers</span>
       </header>
