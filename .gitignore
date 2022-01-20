@@ -29,7 +29,6 @@
 /app/coverage
 
 # production
-/app/build
 
 # misc
 /app/.DS_Store
