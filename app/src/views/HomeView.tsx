@@ -26,8 +26,10 @@ export default function HomeView() : JSX.Element {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <span>this is an app deployed with aws ecs copilot CLI</span>
-        <span onClick={goToHome}>about</span>
-        <span onClick={printNumbers}>get numbers</span>
+        <span>app is hosted on aws route53</span>
+        <span>we also make use of copilot's pipeline</span>
+        <span onClick={goToHome} className='click-here'>about</span>
+        <span onClick={printNumbers} className='click-here'>get numbers</span>
       </header>
     </div>
   );

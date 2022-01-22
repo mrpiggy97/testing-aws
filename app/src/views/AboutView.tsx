@@ -29,9 +29,11 @@ export default function AboutView() : JSX.Element{
                 <p>
                     this is the about page
                 </p>
-                <span onClick={goToHome}>click here to go home</span>
+                <span onClick={goToHome} className='click-here'>click here to go home</span>
                 <span>{greeting}</span>
-                <span onClick={changeGreeting}>change greeting</span>                
+                <span onClick={changeGreeting} className='click-here'>
+                    click here to change greeting
+                </span>                
             </header>
         </div>
     )
